@@ -1,11 +1,149 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meu Site</title>
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+
+    body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fbf3f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    }
+
+    .container {
+    width: 100%;
+    max-width: 350px;
+    text-align: center;
+    background-color: #ffdce5;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 13px #d53963;
+    }
+
+    header {
+    margin-bottom: 20px;
+    }
+
+    .profile-imagem {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    }
+
+    h1 {
+    font-size: 24px;
+    color: #333;
+    }
+
+    p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+    }
+
+    .links ul {
+    list-style: none;
+    padding: 0;
+    }
+
+    .links li {
+    margin: 10px 0;
+    }
+
+    .links a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #db349b;
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: #ec9eb285;
+    transition: background-color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    }
+
+    .links a img {
+    width: 20px; /* Tamanho da imagem do ícone */
+    height: 20px; /* Tamanho da imagem do ícone */
+    margin-right: 8px; /* Espaçamento entre a imagem e o texto */
+    }
+
+    .links a:hover {
+    background-color: #db3482;
+    color: #ffc2c2;
+    }
+
+    footer {
+    margin-top: 20px;
+    font-size: 14px;
+    }
+
+    /* Media Queries para Responsividade */
+    @media (max-width: 600px) {
+    .container {
+    width: 100%;
+    max-width: 300px;
+    }
+
+    .profile-imagem {
+    width: 100px;
+    height: 100px;
+    }
+
+    h1 {
+    font-size: 22px;
+    }
+
+    p {
+    font-size: 14px;
+    }
+
+    .links a {
+    font-size: 16px;
+    padding: 8px 12px;
+    }
+
+    footer {
+    font-size: 12px;
+    }
+    }
+</style>
 </head>
 <body>
-    <h1>Olá, mundo</h1>
+<div class="container">
+    <header>
+        <img src="eb06ab587ab96ac8a2f72d0a8e2e26ad.jpg" alt="foto perfil" class="profile-imagem">
+        <h1>Julia Kristine</h1>
+        <p>Desenvolvedor Web | Estudante</p>
+    </header>
+    <section class="links">
+        <h2>Meus Links</h2>
+        <ul>
+            <li>
+            <a href="https://www.linkedin.com/in/julia-kristine-339517185/">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAC+ElEQVR4nO2ay2sUQRCH2ycoavSWxIMnUYJBkqqNMRdPnhQ9Ra8ePPgHxAgejGDw4uNiMEzVQEBvAfUmCL4wCKKCHkLW7d4kGElAkZBE0YiakdrplTVmZ8ckQ3pxfjCw01szXd90V3XP1iqVKlWqRUk302GN/MAgfTbIwQofn8SXHPiH/g0CqdsB54Myx4 XYI2EvmDXodwyBV6dWWEPg1eWQToc+cRBrZDTSwxDE71COSQN3im8yzSoay3wU49FMX61yTKOZvtrCQwaaqWhcnIvKUZm4/v0XICbj79fAdzXye4M8oZHu5NHfk4TDiYEU1hWgH/PToQb6mm9mUNUCYoBehxmDukf39m0dbOjZJDndwtxPyvEkQKalfRy8jcU23XJzS+ws4g4IP7ZP/+IweDUFCODz1v5ZUo4vO4jEgQb+ssCWYTaf8VFVU9bK7+vdqYFuaKAxgzRelVnLFZklp1/gp+V2pBp5II7NS/DWGeTjBuiWAX4n01IjT0lG1EiX34C3O3GQStvrODYGORv5PfB3g3T10YGutYmDRLXHewg0ZIBPjjT5OwYb+tdn2/zNBr02DdxjkL6FmZFvB6prtXMgsvprpDmNfK6cg6IccItB+mBhOp0DMeC3mwwdK54H7f1ryvWvgQ/amJqStcopEJFsazTSNQP00dpNaKBLMrX+vifds4vvKadAZFtjgF+VZLCfvz8DvRhrvbKh1D6XoRM2nvqdAjFIZ+2818PgNUpWKsQD8MhC8ZBFf1cITMYpEHnq4XfekT+uBTpqQZ6Xtg+DV1OME7dAkCel/W3j9W2l7XJuHZ4sbQ9UsMqOyJxTIFGdL6W/SKUgKh2RIJ1aUUpjRKUxEqQxEqUk3xCj+ot7jVnyOzvyQESHT+LaLOa+ywriikxsEKAZMXSh5DZfudbe7QUQoGlVSWEllwOp2SnHpIHOxC69SaHRDt+svPBkm/x6tcLKNvn1IUT4K0vsMnWxXFDV5emihNpOs0JxtCr/MJAqVSpV1C97gSDqDbqSewAAAABJRU5ErkJggg==" alt="linkedin">
+            LinkedIn
+            </a>
+        </li>
+        <li>Intagram</li>
+        <li>Contato</li>
+        </ul>
+    </section>
+    <footer>
+        <p>&copy; 2024 Julia Kristine</p>
+    </footer>
+    </div>
 </body>
-</html>
+</html> 
